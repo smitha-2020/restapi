@@ -22,13 +22,13 @@ public class ProductControler
         //code to be implemented
     }
 
-    [HttpPut("")] // PUT /api/v1/products/{id}
+    [HttpPut("{id}")] // PUT /api/v1/products/{id}
     public async Task<Product> Update(string id)
     {
         //code to be implemented
     }
 
-    [HttpPatch("")] // PATCH /api/v1/products/{id}
+    [HttpPatch("{id}")] // PATCH /api/v1/products/{id}
     public async Task<Product> UpdateSome(string id)
     {
         //code to be implemented
@@ -40,9 +40,4 @@ public class ProductControler
         //code to be implemented
     }
 
-    [HttpGet("{id}")] // GET /api/v1/products/{id}
-    public async Task<ICollection<Product>> GetByCategoryID(string id)
-    {
-        //code to be implemented
-    }
 }
