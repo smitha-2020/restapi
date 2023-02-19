@@ -24,6 +24,12 @@ public class ProductsController
         //code to be implemented
     }
 
+    [HttpGet("{offset}")] // GET /api/v1/products?offset={offset}&limit={limit}
+    public async Task<ICollection<Product>> Pagination([FromQuery] string offset, [FromQuery] string limit)
+    {
+        //code to be implemented
+    }
+
     [HttpGet("{id}")] // GET /api/v1/products/{id}
     public async Task<Product> Get(string id)
     {
