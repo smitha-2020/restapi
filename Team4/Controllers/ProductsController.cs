@@ -1,6 +1,6 @@
 namespace Controllers;
 
-using Models;
+using Models.Product;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
@@ -12,14 +12,14 @@ public class ProductsController
         //code to be implemented
     }
 
-    [HttpGet("{sortorder}")] // GET /api/v1/products?order={sortorder}
-    public async Task<ICollection<Product>> SortByName([FromQuery] string sortorder)
+    [HttpGet("{order}")] // GET /api/v1/products?orderby={order}
+    public async Task<ICollection<Product>> SortByName([FromQuery] string order)
     {
         //code to be implemented
     }
 
-    [HttpGet("{sortprice}")] // GET /api/v1/products?priceorder={sortprice}
-    public async Task<ICollection<Product>> SortByPrice([FromQuery] string sortprice)
+    [HttpGet("{price}")] // GET /api/v1/products?orderbyprice={price}
+    public async Task<ICollection<Product>> SortByPrice([FromQuery] string price)
     {
         //code to be implemented
     }
@@ -43,13 +43,13 @@ public class ProductsController
     }
 
     [HttpPut("{id}")] // PUT /api/v1/products/{id}
-    public async Task<Product> Update(string id)
+    public async Task<Product> Update(Product p,[FromRoute] int i)
     {
         //code to be implemented
     }
 
     [HttpPatch("{id}")] // PATCH /api/v1/products/{id}
-    public async Task<Product> UpdateSome(string id)
+    public async Task<Product> UpdateSome(Product p,[FromRoute] string id)
     {
         //code to be implemented
     }
@@ -59,5 +59,4 @@ public class ProductsController
     {
         //code to be implemented
     }
-
 }

@@ -18,6 +18,12 @@ public class ReviewsController
         //code to be implemented
     }
 
+    [HttpGet("{pid}")] // GET /api/v1/reviews/{pid}/comments
+    public async Task<ICollection<Review>> GetProductComments([FromRoute] string pid)
+    {
+        //code to be implemented
+    }
+
     [HttpGet("{id}")] // GET /api/v1/reviews/{id}
     public async Task<Review> Get(string id)
     {
@@ -47,5 +53,4 @@ public class ReviewsController
     {
         //code to be implemented
     }
-
 }
