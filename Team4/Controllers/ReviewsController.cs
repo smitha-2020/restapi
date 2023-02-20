@@ -31,7 +31,7 @@ public class ReviewsController
     }
 
     [HttpPost] // POST /api/v1/reviews
-    public async Task<Review> Create()
+    public async Task<Review> Add()
     {
         //code to be implemented
     }
