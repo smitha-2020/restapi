@@ -24,6 +24,8 @@ Main features:
 
 ---
 
+
+```sh
 Product:
 // GET /api/v1/products - Get all products.
 // GET /api/v1/products?orderby={order} - Get all products in orderby name
@@ -45,6 +47,9 @@ Review
 // PUT /api/v1/reviews/{id} - Update Review.
 // PATCH /api/v1/reviews/{id} - Update some review properties.
 // DELETE /api/v1/reviews/{id} - Delete Review.
+
+```
+
 
 ## Requirements
 
