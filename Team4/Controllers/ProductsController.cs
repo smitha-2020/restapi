@@ -24,8 +24,8 @@ public class ProductsController
         //code to be implemented
     }
 
-    [HttpGet("{productname}")] // GET /api/v1/products?serchby={productname}
-    public async Task<ICollection<Product>> SortByName([FromQuery] string productname)
+    [HttpGet("{productname}")] // GET /api/v1/products?searchby={productname}
+    public async Task<ICollection<Product>> SearchByName([FromQuery] string productname)
     {
         //code to be implemented
     }
@@ -49,7 +49,7 @@ public class ProductsController
     }
 
     [HttpPut("{id}")] // PUT /api/v1/products/{id}
-    public async Task<Product> Update(Product p, [FromRoute] int i)
+    public async Task<Product> Update(Product p, [FromRoute] int id)
     {
         //code to be implemented
     }

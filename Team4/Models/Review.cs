@@ -2,7 +2,7 @@ namespace Team4.Models;
 
 public class Review
 {
-    public string id { get; set; }
+    public string Id { get; set; }
     [Required]
     public string UserId { get; set; }
     [Required]
