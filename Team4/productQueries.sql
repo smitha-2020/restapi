@@ -8,7 +8,7 @@ JOIN products p
     ON items.product_id = p.id
 JOIN users u
     ON o.user_id = u.id
-where u.id = 3;
+WHERE u.id = 3;
 
 --Pagination
 
@@ -26,30 +26,20 @@ FROM products;
 --display all products based on price in ascending order
 
 SELECT *
-FROM products as products order by products.price asc;
+FROM products as products ORDER BY  products.price ASC;
 
 --display all products based on price in descending order
 
 SELECT *
-FROM products as products order by products.price desc;
+FROM products as products ORDER BY  products.price DESC;
 
 --display all products based on title in descending order
 
-SELECT * FROM products as products order by products.title desc;
+SELECT * FROM products as products ORDER BY  products.title DESC;
 
 --display all products based on title in ascending  order
 
-SELECT * FROM products as products order by products.title asc;
-
---display all the comments for a particular product
-
-select title,comment,username
-from products  prod
-JOIN reviews review
-    ON prod.id = review.product_id
-JOIN users u
-    ON u.id = review.user_id
-where prod.id = 3;
+SELECT * FROM products as products ORDER BY products.title ASC;
 
 --update products title
 
@@ -59,15 +49,9 @@ UPDATE products  as prod SET  title = 'Macbook pro 10', price=2344 WHERE  id = 3
 
 DELETE FROM products WHERE  id = 9;
 
-SELECT *
-FROM categories;
-
-SELECT *
-FROM products;
-
 --update category id
 
-UPDATE products  as prod SET category_id = 2 where id = 5;
+UPDATE products  as prod SET category_id = 2 WHERE id = 5;
 
 --display all products based on a particular category
 
@@ -75,4 +59,4 @@ SELECT *
 FROM categories as categories
 JOIN products as product
 ON product.category_id = categories.id
-where product.category_id = 2;
+WHERE product.category_id = 2;
